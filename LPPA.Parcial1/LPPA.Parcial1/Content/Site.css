@@ -1,24 +1,80 @@
-﻿body {
-    padding-top: 50px;
-    padding-bottom: 20px;
+﻿/* Elementos generales */
+html, body {
+    height: 100%;
 }
 
-/* Set padding to keep content from hitting the edges */
-.body-content {
-    padding-left: 15px;
-    padding-right: 15px;
+/* Encabezado */
+
+
+header {
+    display: block;
+    background-color: #286af0;
+    padding-top: 5px;
+    padding-bottom: 15px;
+    font-size: large;
+    font-weight: 800;
 }
 
-/* Override the default bootstrap behavior where horizontal description lists 
-   will truncate terms that are too long to fit in the left column 
-*/
-.dl-horizontal dt {
-    white-space: normal;
+
+#container {
+    width: 960px;
+    margin: 0 auto;
 }
 
-/* Set width on the form input elements since they're 100% wide by default */
-input,
-select,
-textarea {
-    max-width: 280px;
+aside {
+    float: left;
+    width: 18%;
 }
+
+    aside ul {
+        margin-top: 10px;
+        padding: 0;
+    }
+
+        aside ul li {
+            list-style: none;
+            display: block;
+            padding: 15px 0px;
+            margin-left: 5px;
+            border-radius: 1px;
+            border: 1px solid red;
+        }
+
+            aside ul li a {
+                text-decoration: none;
+                color: black;
+            }
+
+footer {
+    clear: both;
+    position: relative;
+    float: none;
+    padding: 5px;
+    background-color: #286af0;
+    color: white;
+    text-align: center;
+    text-decoration: underline;
+}
+
+section {
+    background-color: #ccc;
+    overflow: auto;
+    float: right;
+    padding: 5px;
+    width: 79%;
+    min-height: 450px;
+    padding: 35px 0 60px 0;
+}
+
+    section .foto {
+        width: 200px;
+        height: 200px;
+        display: block;
+        margin: auto;
+    }
+
+    section .titulo {
+        display: block;
+        text-align: center;
+        align-items: center;
+    }

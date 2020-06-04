@@ -1,0 +1,1 @@
+﻿/* Archivo JS con las funciones de la aplicacion */
