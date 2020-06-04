@@ -1,0 +1,57 @@
+﻿<h1>Cosmo</h1>
+<div class="panel">
+    <div class="control">
+        <label>Siglo</label>
+        <input id="siglo" type="number" placeholder="Ingrese siglo de la constelacion" />
+    </div>
+    <div class="control">
+        <label>Nombre</label>
+        <input id="name" type="text" placeholder="Nombre de la constalacion." />
+    </div>
+    <div class="control">
+        <hr />
+        <button id="btnSave" type="button" class="btn-save" onclick="add()">Grabar</button>
+        <button id="btnList" type="button" class="btn-listar" onclick="listar()">Listar constelaciones</button>
+    </div>
+</div>
+<div class="panel">
+    <h2>Listado de constelaciones</h2>
+    <div id="list">
+    </div>
+</div>
+
+
+
+@section scripts{
+    <script>
+
+        // Vector de datos en memoria
+        var data = new Array();
+
+        // Prototipo de datos para constelaciones
+        function Constelacion(siglo, nombre) {
+            this.siglo = siglo;
+            this.nombre = nombre;
+        }
+
+        // Agrega una nueva constelacion
+        function add() {
+            var siglo = document.getElementById("siglo");
+            var name = document.getElementById("name");
+            var constelacion = new Constelacion(siglo.value, name.value);
+            data.push(constelacion);
+            siglo.value = "";
+            name.value= "";
+        }
+
+        // Muestra las constelaciones cargadas
+        function listar() {
+
+            var html = data.map(function (e) {
+                return "<span>Siglo: <b>" + e.siglo + "</b> - " + "Nombre: <b>" + e.nombre + "</b></span><br />"
+            })
+            document.getElementById("list").innerHTML = html;
+        }
+    </script>
+
+}

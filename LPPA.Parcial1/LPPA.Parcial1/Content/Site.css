@@ -26,24 +26,41 @@ aside {
     width: 18%;
 }
 
-    aside ul {
-        margin-top: 10px;
-        padding: 0;
+aside .contenido {
+    margin-top: 10px;
+    padding: 0;
+    display: block;
+    padding: 15px 0px;
+    margin-left: 5px;
+    border-radius: 1px;
+    border: 1px solid red;
+}
+
+aside ul {
+    margin-top: 10px;
+    padding: 0;
+}
+
+    aside ul li {
+        list-style: none;
+        display: block;
+        padding: 15px 0px;
+        margin-left: 5px;
     }
 
-        aside ul li {
-            list-style: none;
-            display: block;
-            padding: 15px 0px;
-            margin-left: 5px;
-            border-radius: 1px;
-            border: 1px solid red;
-        }
+ 
+a:link {
+  color: red;
+}
 
-            aside ul li a {
-                text-decoration: none;
-                color: black;
-            }
+a:hover {
+    color: green;
+}
+
+a:active {
+  color: blue;
+}
+
 
 footer {
     clear: both;
@@ -78,3 +95,24 @@ section {
         text-align: center;
         align-items: center;
     }
+
+.panel{
+    margin:30px;
+    border: 1px solid;
+    padding:10px;
+    border-radius:5px;
+    background-color:darkgray;
+}
+
+    .panel .control {
+        margin-bottom:5px;
+    }
+
+.panel .control label{
+    display:inline-block;
+    width:100px;
+}
+
+.panel input{
+    padding:5px;
+}
